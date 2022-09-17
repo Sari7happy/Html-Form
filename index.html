@@ -35,8 +35,35 @@
             <dd>
                 <input type="radio" id="online" class="lesson" name="your-lesson" value="online" checked>
                 <!-- radioボタンは丸い選ぶもの -->
+                <label for="online">オンラインで受講</label><br>
+                <input type="radio" id="venue" class="lesson" name="your-lesson" value="venue">
+                <label for="venue">会場で受講</label>
+                <p id="lesson-error" class="error-text"></p>
             </dd>
-            
+
 
         </dl>
+        <div class="note-online">
+            <p>
+            当日はよろしくお願いいたします。<br>
+            参加方法は別途お送りいたします。
+        
+            </p>
+    
+    </div>
+    <div class="note-venue">
+        <p>
+            【会場情報】<br>
+            会場：広島県<br>
+            住所：〠55-555<br>
+            電話番号：55-555-555
+        </p>
+    </div>
+    <div class="button-area">
+        <button id="submit-button" type="button" value="">上記の内容で申し込む</button>
+
+    </div>
     </form>
+    </div>
+</html>
+    
