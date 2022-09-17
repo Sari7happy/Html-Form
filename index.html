@@ -18,6 +18,25 @@
                 
                 <p id="name-error" class="error-text"></p>
             </dd>
+            <dt><label for="tel1">電話番号</label><span>必須</span></dt>
+            <dd>
+                <input type="text" id="tel1" name="your-tel1">-
+                <input type="text" id="tel2" name="your-tel2">-
+                <input type="text" id="tel3" name="your-tel3">
+                <p id="tel-error" class="error-text"></p>
+
+            </dd>
+            <dt><label for="reservation">予約日</label><span>必須</span></dt>
+            <dd>
+                <input type="text" id="reservation" name="tour-reservation">13時-14時
+                <p id="reservation-error" class="error-text"></p>
+            </dd>
+            <dt>受講形式<span>必須</span></dt>
+            <dd>
+                <input type="radio" id="online" class="lesson" name="your-lesson" value="online" checked>
+                <!-- radioボタンは丸い選ぶもの -->
+            </dd>
+            
+
         </dl>
     </form>
-</div>
