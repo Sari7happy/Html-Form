@@ -3,25 +3,71 @@
 html {
     font-size: 100%;
 }
+
 body {
     background-color:#f2f2f2;
     color:#333;
     font-size:0,875rem;
 }
+
 .content {
     max-width: 1000px;
     padding: 60px 10px;
     margin: 0 auto;
 }
+
 .page-title {
     text-align: center;
     margin-bottom: 30px;
 }
+
 .form-area dt {
     width:30%;
     display: flex;
     align-items: center;
     justify-content:space-between;
     /* justify-contentは間隔を名前と必須で開けるときに使う */
+    background-color: #3d546a;
+    color: #fff;
+    padding: 30px 15px;
+    margin-bottom: 2px;
 }
+
+.form-area dt span {
+    background-color: #fff;
+    font-size: 0.75rem;
+    padding: 0 8px;
+
 }
+.form-area dd {
+    width: 70%;
+    background-color: #fff;
+    padding: 22px 15px 20px 15px;
+    margin-bottom: 2px;
+}
+
+.form-area input {
+    background-color: #f2f2f2;
+    padding: 8px 10px;
+}
+
+.button-area {
+    text-align: center;
+}
+
+#submit-button {
+    background-color: #e85c4e;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding: 20px 40px;
+    text-align: center;
+
+}
+#submit-button:hover {
+    opacity:0.7;
+    /* hoverはカーソルを近づけると色が変わる。 */
+
+}
+
