@@ -5,7 +5,8 @@ html {
 }
 
 body {
-    background-color:#f2f2f2;
+    font-family: 'TsukuBRdGothic-Regular',sans-serif;
+    background-color:#FFDBC9;
     color:#333;
     font-size:0.875rem;
 }
@@ -32,7 +33,7 @@ body {
     align-items: center;
     justify-content:space-between;
     /* justify-contentは間隔を名前と必須で開けるときに使う */
-    background-color: #3d546a;
+    background-color:#FF6666;
     color: #fff;
     padding: 30px 15px;
     margin-bottom: 2px;
@@ -62,9 +63,9 @@ body {
 }
 
 #submit-button {
-    background-color: #e85c4e;
-    border-radius: 5px;
-    color: #fff;
+    background-color:#DEB887 ;
+    border-radius: 20px;
+    color: #000;
     font-size: 1.25rem;
     font-weight: bold;
     padding: 20px 40px;
@@ -139,11 +140,17 @@ body {
     margin-bottom: 10px;
 }
 .form-area dd:last-child {
-    margin-bottom: 0 ;
+    margin-bottom: 0;
 
 }
 .note-online,
 .note-venue {
     padding: 0 10px;
 }
+}
+.custom-calendar-saturday a.ui-state-default {
+    background-color: #c1e0ff;
+}
+.custom-calendar-sunday a.ui-state-default {
+    background-color: #ffc1c1;
 }

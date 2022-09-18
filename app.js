@@ -1,14 +1,28 @@
 $(function() {
-  $('#reservation').datepicker();
+  $('#reservation').datepicker({
+    beforeShowDay: function(date) {
+        if (date.getDay() === 0) {
+            // 日曜日の場合
+            return [true, "custom-calendar-sunday", ""];
+        } else if (date.getDay() === 6) {
+            // 土曜日の場合
+            return [true, "custom-calendar-saturday", ""];
+        }
+        // 平日の場合
+        return [true, "custom-calendar-weekday", ""];
+    }
+});
+  
+
   // datepickerは日付選ぶ時に使う/
-  $('.lesson').on('change',function() {
-      let lesson= $('input[name=your-lesson]:checked').val();
-      if(lesson =='online') {
-          $('.note-online').css('display','block');
-          $('.note-venue').css('display','none');
-      } else if(lesson=='venue') {
-          $('note-online').css('display','none');
-          $('note-venue').css('display','block');
+  $('.lesson').on('change', function() {
+      let lesson = $('input[name=your-lesson]:checked').val();
+      if (lesson == 'online') {
+          $('.note-online').css('display', 'block');
+          $('.note-venue').css('display', 'none');
+      } else if (lesson == 'venue') {
+          $('.note-online').css('display', 'none');
+          $('.note-venue').css('display', 'block');
       }
   });
   
@@ -18,18 +32,19 @@ $(function() {
           $('#reservation-error').text("");
           $('#lesson-error').text("");
 
-      if($('input[name="your-name"]').val() =="") {
+      if($('input[name="your-name"]').val() == "") {
           $("#name-error").text("名前は必須項目です。");
       }
+      
       if(
-          ($('input[name="your-tel1]').val()=="") ||
-          ($('input[name="your-tel2]').val()=="") ||
-          ($('input[name="your-tel3]').val()=="")
+        ($('input[name="your-tel1"]').val() == "") ||
+        ($('input[name="your-tel2"]').val() == "") ||
+        ($('input[name="your-tel3"]').val() == "")
       ) {
           $("#tel-error").text("電話番号は必須項目です。");
       }
 
-      if($('input[name="your-reservation"]').val() ==""){
+      if($('input[name="your-reservation"]').val() == "") {
           $("#reservation-error").text("予約日は必須項目です。");
       }
   });
